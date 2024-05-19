@@ -1,1 +1,1 @@
-A repository for the MOOV leaderboard project
+A repository for the MOOV leaderboard project.
