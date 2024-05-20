@@ -1,3 +1,10 @@
 lib
 System Volume Information
 .Trashes
+.backup
+.fseventsd
+.vs
+.vscode
+secrets.py
+nightscout_secrets.py
+.TemporaryItems

@@ -4,7 +4,7 @@
         "c:\\Users\\scottha\\.vscode\\extensions\\joedevivo.vscode-circuitpython-0.1.3\\stubs",
         "c:\\Users\\scottha\\AppData\\Roaming\\Code\\User\\globalStorage\\joedevivo.vscode-circuitpython\\bundle\\20201024\\adafruit-circuitpython-bundle-py-20201025\\lib"
     ],
-    "circuitpython.board.version": "6.0.0-rc.0",
+    "circuitpython.board.version": "9.0.4",
     "python.pythonPath": "C:\\Users\\scottha\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
     "circuitpython.board.vid": "0x239A",
     "circuitpython.board.pid": "0x80CA",
