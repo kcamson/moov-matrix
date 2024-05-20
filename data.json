@@ -1,0 +1,18 @@
+{
+    "freshmen": {
+        "tapped_in": 32,
+        "total_students": 500
+    },
+    "sophomores": {
+        "tapped_in": 143,
+        "total_students": 500
+    },
+    "juniors": {
+        "tapped_in": 284,
+        "total_students": 500
+    },
+    "seniors": {
+        "tapped_in": 470,
+        "total_students": 500
+    }
+}
