@@ -32,7 +32,7 @@ ROOT = displayio.Group(x=GLOBAL_X_OFFSET, y=GLOBAL_Y_OFFSET)
 display.root_group = ROOT
 
 NETWORK = Network(status_neopixel=board.NEOPIXEL, debug=True)
-# NETWORK.connect()
+NETWORK.connect()
 
 def show_gif(gif:gifio.OnDiskGif, duration:float=1) -> None:
     """Show a gif on the display for a certain duration.
@@ -190,7 +190,7 @@ class ClassData:
 class StudentData:
     """All the data for the students. Contains all the data for each class. Again, seems like an over-abstraction but could be useful if some school-wide data is added."""
     def __init__(self) -> None:
-        self.data = fetch_student_data_from_file()
+        self.data = fetch_student_data()
         self.fre = ClassData("FSMN", self.data["freshmen"])
         self.sop = ClassData("SPHS", self.data["sophomores"])
         self.jun = ClassData("JNRS", self.data["juniors"])
@@ -200,7 +200,7 @@ class StudentData:
     
     def update(self) -> None:
         """Updates all of the data for the students."""
-        self.data = fetch_student_data_from_file()
+        self.data = fetch_student_data()
         self.fre.update(self.data["freshmen"])
         self.sop.update(self.data["sophomores"])
         self.jun.update(self.data["juniors"])
@@ -238,14 +238,14 @@ for class_data in student_data.classes:
     class_data.create_group(0, (len(ROOT)*GLOBAL_HEIGHT)//4)
     ROOT.append(class_data.group)
 
-i = 0
+# i = 0
 while True:
-    i = min(i + 4, 100)
-    student_data.fre.update(i)
+    # i = min(i + 4, 100)
+    # student_data.fre.update(i)
     for class_data in student_data.classes:
         if class_data.percentage == 100 and not class_data.celebrated:
             class_data.celebrated = True
             show_celebration(class_data.data_group[0])
 
-    # student_data.update()
-    time.sleep(0.2)
+    student_data.update()
+    time.sleep(10)
